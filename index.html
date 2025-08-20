@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantasy Map Generator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+<main class="wrap">
+  <aside class="side">
+    <h3 style="margin-bottom: -5px; margin-top: -2px;">Controls</h3>
+    <div class="row"><label for="seed">Seed:</label><input id="seed" type="text" placeholder="E.g. elder‑roots or vb226zo1" /></div>
+    <div class="row" style="flex-direction:row;gap:8px;justify-content:center">
+      <button id="btnRand">Random seed</button>
+      <button id="btnGen">Generate</button>
+    </div>
+    <div class="row" style="margin-top: -7px;"><label for="size">Size:</label>
+      <select id="size"><option value="1280" selected>1280 × 800</option><option value="1600">1600 × 1000</option><option value="1920">1920 × 1200</option></select>
+    </div>
+    <div class="row">
+  <label for="scale">World scale</label>
+  <div class="slider-row">
+    <span>40</span>
+    <div class="slider-container">
+      <input id="scale" type="range" min="40" max="240" value="120" />
+      <output for="scale" class="slider-value">120</output>
+    </div>
+    <span>240</span>
+  </div>
+</div>
+
+<div class="row">
+  <label for="moist">Moisture</label>
+  <div class="slider-row">
+    <span>0</span>
+    <div class="slider-container">
+      <input id="moist" type="range" min="0" max="100" value="52" />
+      <output for="moist" class="slider-value">52</output>
+    </div>
+    <span>100</span>
+  </div>
+</div>
+
+<div class="row">
+  <label for="temp">Temperature</label>
+  <div class="slider-row">
+    <span>0</span>
+    <div class="slider-container">
+      <input id="temp" type="range" min="0" max="100" value="55" />
+      <output for="temp" class="slider-value">55</output>
+    </div>
+    <span>100</span>
+  </div>
+</div>
+    <h3>Layers</h3>
+    <div class="row layers-row"><label class="small" for="lyrRelief">Terrain relief</label><input id="lyrRelief" type="checkbox" checked></div>
+    <div class="row layers-row"><label class="small" for="lyrCoast">Coastline & shelf</label><input id="lyrCoast" type="checkbox" checked></div>
+    <div class="row layers-row"><label class="small" for="lyrRivers">Rivers & lakes</label><input id="lyrRivers" type="checkbox" checked></div>
+    <div class="row layers-row"><label class="small" for="lyrBorders">Political borders</label><input id="lyrBorders" type="checkbox" checked></div>
+    <div class="row layers-row"><label class="small" for="lyrLabels">Country labels</label><input id="lyrLabels" type="checkbox" checked></div>
+    <div class="row" style="flex-direction:row;gap:8px;justify-content:center;margin-top: 0px;">
+      <button id="btnPng">Export PNG</button>
+    </div>
+  </aside>
+  <div class="board">
+    <canvas id="map" width="1280" height="800"></canvas>
+    <div id="badge" class="badge"></div>
+    <div id="scaleBar" class="scale"></div>
+  </div>
+</main>
+<div style="font-size: xx-small; margin-top: -10px; text-align: center;"> ®Copyright Recives. This Wep-Page and Programe is made and owen by Vikhyatvarun.</div>
+<button class="info-btn"> i </button>
+<div class="info-popup" style="text-align: center;">This is a custom fantasy map generator. Use the controls to adjust the seed, size, scale, moisture, and temperature. Check layers to toggle features like terrain relief, coastlines, rivers, borders, and labels. Export your map as a PNG!<br>Note :- This Web-page and program is not made by an Professional so, there might be isuess and bugs.<p style="text-align: center;margin-bottom: -4px;margin-top: 0PX; font-size: x-small; font:  bolder; font-style: italic;">Contact with me - <a href="https://www.instagram.com/vikhyatvarun/" style="color:rgb(85, 130, 212);">@vikhyatvarun</a></div>
+<script src="script.js"></script>
+</body>
+</html>
